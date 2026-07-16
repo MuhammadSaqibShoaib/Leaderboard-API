@@ -64,10 +64,10 @@ namespace LeaderboardAPI.Controllers
             return NoContent();
         }
 
-        [HttpGet("crash")]
-        public async Task<ActionResult> Crash()
-        {
-            throw new Exception("Something went terribly wrong!");
-        }
+        //[HttpGet("crash")]
+        //public async Task<ActionResult> Crash()
+        //{
+        //    throw new Exception("Something went terribly wrong!");
+        //}
     }
 }
