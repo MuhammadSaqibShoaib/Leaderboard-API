@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlite("Data Source=leaderboard.db"));
+    opt.UseSqlite(builder.Configuration.GetConnectionString("Default")));
 
 
 builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
